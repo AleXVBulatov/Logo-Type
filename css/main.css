@@ -1,0 +1,139 @@
+@import "./reset.css";
+@import "./normalize.css";
+@import "./fonts.css";
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap");
+
+* {
+  /* box-sizing: border-box; */
+}
+
+:root {
+  --font-family-pt: "PT Serif", serif;
+  --font-family-roboto: "Roboto", sans-serif;
+
+  --container-width: 1170px; /*1140px контейнер + 15px * 2 paddings*/
+  --container-padding: 15px;
+
+  --bg-color-main: #fff;
+
+  --font-size: 14px;
+  --line-height: 18px;
+
+  --color-main: #5e5e5e;
+  --color-secondary: #d3d2d2;
+  --color-orange: #ffc222;
+  /* --color-white-100: #ffffff; */
+  /* --color-white-50: #ffffff80; */
+  /* --color-violet-100: #6f5cfc; */
+  /* --color-violet-50: #6f5cfc80; */
+}
+
+body {
+  font-family: var(--font-family-pt);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: 400;
+  color: var(--color-main);
+  background-color: var(--bg-color-main);
+}
+
+.container {
+  max-width: var(--container-width);
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+  height: 100%;
+}
+
+.orange {
+  /* background-color: orange; */
+}
+
+a {
+  display: inline-block;
+}
+
+/* #region header__top */
+.header {
+  font-family: var(--font-family-roboto);
+}
+
+.header__top {
+  height: auto;
+  background-color: #303030;
+}
+
+.header__btn {
+  float: right;
+  padding: 5px 20px 4px 50px;
+
+  font-size: 16px;
+  line-height: 36px;
+
+  color: #1b1b1b;
+  background-color: var(--color-orange);
+}
+
+/* для решения проблемы с float:right */
+.header__contacts:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.header__phone,
+.header__email {
+  position: relative;
+  color: #cbcacb;
+  line-height: 45px;
+  letter-spacing: 0.25px;
+}
+.header__phone {
+  padding-left: 20px;
+  padding-right: 30px;
+}
+.header__phone::before {
+  content: "\f095";
+  font-family: "icomoon";
+  position: absolute;
+  left: 0;
+  color: var(--color-orange);
+}
+.header__email {
+  padding-left: 24px;
+}
+/* #endregion */
+
+/* #region header__content */
+.header__content {
+  height: 93px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.menu ul {
+  display: flex;
+  column-gap: 12px;
+  margin-right: -16px;
+}
+
+.menu a {
+  border: 1px solid transparent;
+  padding: 0px 16px;
+
+  color: var(--color-main);
+  font-size: 16px;
+  line-height: 34px;
+
+  transition: all 0.5s ease;
+}
+
+.menu a:hover {
+  border: 1px solid var(--color-orange);
+}
+
+/* #endregion */
