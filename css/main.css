@@ -494,9 +494,7 @@ a {
   height: 100%;
   transform: rotate(90deg);
 }
-/* .form__box-inner .jq-selectbox__dropdown ul {
-  left: 10px;
-} */
+
 .form__box-inner .jq-selectbox__dropdown {
   width: 100%;
   margin: 2px 0 0;
@@ -560,4 +558,65 @@ a {
 .form-btn::after {
   color: var(--color-black-100);
 }
-/* #region */
+/* #endregion */
+
+/* #region advantages */
+.advantages {
+  padding: 55px 0 36px;
+  min-height: 285px;
+  background-image: url(../img/advantages/advantages-fon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.advantages__row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 60px;
+}
+
+.advantages__item {
+  flex: 1 1 33.33%;
+  text-align: center;
+}
+
+.advantages__title {
+  position: relative;
+  padding-top: 68px;
+  margin-bottom: 15px;
+  font-family: var(--font-family-roboto);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--color-white-100);
+}
+.advantages__title::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid var(--color-orange);
+}
+.advantages__title::after {
+  content: "\f00c";
+  font-family: "icomoon";
+  position: absolute;
+  font-size: 14px;
+  line-height: 40px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white-100);
+}
+
+.advantages__text {
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: var(--color-secondary);
+  hyphens: auto;
+}
+/* #endregion */
