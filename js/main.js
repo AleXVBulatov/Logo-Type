@@ -1,6 +1,6 @@
 // import candidatesItems from "./../libs/candidadesItems.mjs";
 
-$(".slider__inner").slick({
+$(".slider__inner, .news__slider").slick({
   infinite: false,
   nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
   prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
