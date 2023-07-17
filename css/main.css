@@ -281,7 +281,15 @@ a {
 
 /* #region modal */
 .modal {
+  max-width: 500px;
+  min-height: 200px;
+  margin: 0 auto;
   display: none;
+}
+.modal form {
+}
+.modal input {
+  /* display: block; */
 }
 /* #endregion */
 
@@ -848,9 +856,6 @@ a {
   background-color: #595959;
 }
 
-.container {
-}
-
 .footer__row {
   display: flex;
   justify-content: space-between;
@@ -866,6 +871,7 @@ a {
 
 .footer__title {
   margin-bottom: 12px;
+  font-family: 500;
   font-size: 16px;
   line-height: 36px;
   letter-spacing: 0.5px;
@@ -886,13 +892,13 @@ a {
 .footer__btn::before {
 }
 
-.header__contacts {
+.footer__contacts {
   line-height: 36px;
   letter-spacing: 0.25px;
 }
-.header__contacts li:nth-child(1)::before,
-.header__contacts li:nth-child(2)::before,
-.header__contacts li:nth-child(3)::before {
+.footer__contacts li:nth-child(1)::before,
+.footer__contacts li:nth-child(2)::before,
+.footer__contacts li:nth-child(3)::before {
   font-family: "icomoon";
   display: inline-block;
   width: 16px;
@@ -901,16 +907,16 @@ a {
   font-size: 16px;
   color: var(--color-orange);
 }
-.header__contacts li:nth-child(1)::before {
+.footer__contacts li:nth-child(1)::before {
   content: "\f095";
 }
-.header__contacts li:nth-child(2)::before {
+.footer__contacts li:nth-child(2)::before {
   content: "\f003";
 }
-.header__contacts li:nth-child(3)::before {
+.footer__contacts li:nth-child(3)::before {
   content: "\f041";
 }
-.header__contacts a {
+.footer__contacts a {
   font-size: 16px;
   color: var(--color-white-100);
 }
@@ -934,7 +940,7 @@ a {
 .copy__text {
   font-family: var(--font-family-roboto);
   font-size: 12px;
-  line-height: 41px;
+  line-height: 42px;
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;

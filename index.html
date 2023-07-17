@@ -16,7 +16,7 @@
         <div class="container">
           <div class="header__contacts">
             <a href="tel:380963092145" class="header__phone">+38 (096) 309 21 45</a>
-            <a href="#" class="header__email">layout585@gmail.com </a>
+            <a href="#" class="header__email">layout585@gmail.com</a>
             <a href="#" class="header__btn">Бесплатная консультация</a>
           </div>
         </div>
@@ -25,16 +25,16 @@
         <div class="container">
           <div class="row">
             <div class="header__logo">
-              <a href="#">
+              <a href="/">
                 <img src="img/logo.png" alt="Logo" />
               </a>
             </div>
             <nav class="menu">
               <ul>
                 <li><a href="#">Главная</a></li>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#footer">Контакты</a></li>
               </ul>
             </nav>
           </div>
@@ -312,7 +312,7 @@
                 Полное прекращение существования юридического лица с сохранением легальности всей предыдущей деятельности.
               </div>
               <a href="#" class="footer__btn">Бесплатная консультация</a>
-              <ul class="header__contacts">
+              <ul class="footer__contacts">
                 <li><a href="tel:380963092145">+38 (096) 309 21 45</a></li>
                 <li><a href="#">layout585@gmail.com</a></li>
                 <li><a href="#">Киев, ул.Пушиной, 13</a></li>
@@ -336,8 +336,12 @@
     </footer>
 
     <div id="modal" class="modal">
-      <h2>Hello!</h2>
-      <p>You are awesome!</p>
+      <form action="" method="POST">
+        <input type="text" placeholder="Ваше имя" />
+        <input type="text" placeholder="Ваш телефон" />
+        <button type="submit">Отправить</button>
+      </form>
+      <div class="model__btn-close">x</div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
