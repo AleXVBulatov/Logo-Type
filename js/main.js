@@ -35,11 +35,11 @@ function modalOpen() {
     ) {
       modalWindowRef.classList.toggle("none");
       bodyRef.classList.toggle("no-scroll");
-      bodyRef.style.paddingRight = "17px";
+      // bodyRef.style.paddingRight = "17px";
     }
 
     if (modalWindowRef.classList.contains("none") && !menuIconRef.classList.contains("js-menu-icon-active")) {
-      bodyRef.style.paddingRight = "0px";
+      // bodyRef.style.paddingRight = "0px";
     }
   });
 
@@ -47,7 +47,7 @@ function modalOpen() {
     if (!modalWindowRef.classList.contains("none") && event.key === "Escape") {
       modalWindowRef.classList.add("none");
       bodyRef.classList.remove("no-scroll");
-      bodyRef.style.paddingRight = "0px";
+      // bodyRef.style.paddingRight = "0px";
     }
   });
 }
@@ -68,9 +68,9 @@ function btnToggle() {
       bodyRef.classList.toggle("no-scroll");
 
       if (menuRef.classList.contains("active")) {
-        bodyRef.style.paddingRight = "17px";
+        // bodyRef.style.paddingRight = "17px";
       } else {
-        bodyRef.style.paddingRight = "0px";
+        // bodyRef.style.paddingRight = "0px";
       }
     }
 
@@ -84,7 +84,7 @@ function btnToggle() {
       bodyRef.classList.remove("no-scroll");
       navListRef.classList.remove("menu-nav-open");
       navListRef.classList.add("menu-nav-close");
-      bodyRef.style.paddingRight = "0px";
+      // bodyRef.style.paddingRight = "0px";
     }
   });
 }

@@ -152,6 +152,7 @@ a {
 .services__top,
 .news__top {
   display: flex;
+  column-gap: 30px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 66px;
@@ -195,6 +196,7 @@ a {
 
 .services__btn,
 .news__btn {
+  flex: 0 0 auto;
   align-self: flex-end;
   padding: 5px 39px;
   border: 3px solid #e6e6e6;
@@ -542,11 +544,11 @@ a {
   display: flex;
   justify-content: space-between;
   column-gap: 30px;
-  min-height: 366px;
 }
 
 .services__item {
   flex: 0 1 33.33%;
+  min-height: 366px;
   padding: 24px 36px 40px 36px;
   text-align: center;
   background-color: #f9f9f9;
@@ -561,6 +563,7 @@ a {
 }
 
 .services__item-img {
+  height: 54px;
   margin-bottom: 24px;
 }
 
