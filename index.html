@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/jquery.formstyler.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header id="header" class="header">
@@ -17,7 +18,7 @@
           <div class="header__contacts">
             <a href="tel:380963092145" class="header__phone">+38 (096) 309 21 45</a>
             <a href="#" class="header__email">layout585@gmail.com</a>
-            <a href="#" class="header__btn">Бесплатная консультация</a>
+            <a href="#" class="header__btn" data-src="#modal">Бесплатная консультация</a>
           </div>
         </div>
       </div>
@@ -29,14 +30,19 @@
                 <img src="img/logo.png" alt="Logo" />
               </a>
             </div>
-            <nav class="menu">
-              <ul>
+            <nav id="menu" class="menu">
+              <ul class="nav__list">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#about">О компании</a></li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#footer">Контакты</a></li>
               </ul>
             </nav>
+            <button type="button" id="nav__btn-toggle" class="nav__btn-toggle">
+              <div class="menu-icon-wrapper">
+                <div id="menu-icon" class="menu-icon"></div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -76,7 +82,7 @@
       </div>
     </section>
 
-    <section id="services" class="services">
+    <section id="services" class="services none">
       <div class="container">
         <div class="services__top">
           <div class="services__title-box">
@@ -140,7 +146,7 @@
       </div>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about none">
       <div class="container">
         <div class="about__inner">
           <div class="about__title">О компании</div>
@@ -154,7 +160,7 @@
       </div>
     </section>
 
-    <section id="form" class="form">
+    <section id="form" class="form none">
       <div class="container">
         <div class="form__inner">
           <div class="form__content">
@@ -206,7 +212,7 @@
       </div>
     </section>
 
-    <section id="advantages" class="advantages">
+    <section id="advantages" class="advantages none">
       <div class="container">
         <div class="advantages__row">
           <div class="advantages__item">
@@ -229,7 +235,7 @@
       </div>
     </section>
 
-    <section id="news" class="news">
+    <section id="news" class="news none">
       <div class="container">
         <div class="news__top">
           <div class="news__title-box">
@@ -302,7 +308,7 @@
       </div>
     </section>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer none">
       <div class="footer__content">
         <div class="container">
           <div class="footer__row">
@@ -335,13 +341,15 @@
       </div>
     </footer>
 
-    <div id="modal" class="modal">
-      <form action="" method="POST">
-        <input type="text" placeholder="Ваше имя" />
-        <input type="text" placeholder="Ваш телефон" />
-        <button type="submit">Отправить</button>
-      </form>
-      <div class="model__btn-close">x</div>
+    <div id="modal" class="modal none">
+      <div class="modal__inner">
+        <form action="#" method="POST">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="text" placeholder="Ваш телефон" />
+          <button type="submit" class="model__btn">Отправить</button>
+        </form>
+        <button type="menu" id="model__btn-close" class="model__btn-close"><span></span></button>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

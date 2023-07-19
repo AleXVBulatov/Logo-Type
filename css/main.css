@@ -24,8 +24,6 @@
   --color-orange: #ffc222;
   --color-white-100: #ffffff;
   --color-black-100: #212020;
-  /* --color-violet-100: #6f5cfc; */
-  /* --color-violet-50: #6f5cfc80; */
 }
 
 body {
@@ -71,11 +69,83 @@ body {
 
 .none {
   display: none;
+  /* transition: all 5s; */
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 a {
   display: inline-block;
 }
+
+/* #region btn-toggle */
+.nav__btn-toggle {
+  display: none;
+  position: absolute;
+  right: 15px;
+  background: none;
+}
+.menu-icon-wrapper {
+  --time: 0.2s;
+  --top: 7px;
+  --width: 30px;
+  --line-height: 2px;
+  --border-radius: calc(var(--line-height) / 2);
+  --color: var(--color-main);
+  --color-active: var(--color-orange);
+
+  width: var(--width);
+  height: calc(var(--top) * 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-icon {
+  position: relative;
+  width: 100%;
+  height: var(--line-height);
+  border-radius: var(--border-radius);
+  transform: translateY(-50%);
+  background-color: var(--color);
+}
+.menu-icon:before,
+.menu-icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--line-height);
+  border-radius: var(--border-radius);
+  background-color: var(--color);
+}
+.menu-icon:before {
+  top: calc(-1 * var(--top));
+  transition: transform var(--time) linear, top var(--time) ease-in var(--time);
+}
+.menu-icon:after {
+  top: calc(1 * var(--top));
+  transition: transform var(--time) linear, top var(--time) ease-in var(--time);
+}
+
+.js-menu-icon-active {
+  background-color: transparent;
+}
+.js-menu-icon-active:before {
+  top: 0px;
+  background-color: var(--color-active);
+  transform: rotate(45deg);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+.js-menu-icon-active:after {
+  top: 0px;
+  background-color: var(--color-active);
+  transform: rotate(-45deg);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+/* #endregion */
 
 /* #region common  */
 /* #region 1. названия секций */
@@ -190,6 +260,89 @@ a {
 /* #endregion */
 /* #endregion */
 
+/* #region modal */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.9);
+  transition: all 5s;
+}
+
+.modal__inner {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 85px 50px 50px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: var(--font-family-roboto);
+}
+.modal form {
+}
+.modal input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border: 1px solid var(--color-main);
+  border-radius: 5px;
+}
+.model__btn {
+  height: 40px;
+  float: right;
+  padding: 0 10px;
+  border: 1px solid var(--color-main);
+  border-radius: 5px;
+  background-color: var(--color-orange);
+}
+
+.model__btn-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  transform: translate(50%, -50%);
+  /* background: none; */
+}
+
+.model__btn-close span {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 2px;
+  background-color: rgba(128, 128, 128, 0.1);
+}
+.model__btn-close span::before,
+.model__btn-close span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-main);
+  transform: translateY(-50%);
+}
+.model__btn-close span::before {
+  transform: rotate(45deg);
+}
+.model__btn-close span::after {
+  transform: rotate(-45deg);
+}
+
+/* #endregion */
+
 /* #region header__top */
 .header {
   font-family: var(--font-family-roboto);
@@ -234,6 +387,7 @@ a {
 }
 .header__email {
   padding-left: 24px;
+  padding-right: 30px;
 }
 .header__email::before {
   content: "\f003";
@@ -256,13 +410,17 @@ a {
   height: 100%;
 }
 
-.menu ul {
+/* .menu {
+  position: relative;
+} */
+
+.nav__list {
   display: flex;
   column-gap: 12px;
   margin-right: -16px;
 }
 
-.menu a {
+.nav__list a {
   border: 1px solid transparent;
   padding: 0px 16px;
 
@@ -273,24 +431,10 @@ a {
   transition: all 0.5s ease;
 }
 
-.menu a:hover {
+.nav__list a:hover {
   border: 1px solid var(--color-orange);
 }
 
-/* #endregion */
-
-/* #region modal */
-.modal {
-  max-width: 500px;
-  min-height: 200px;
-  margin: 0 auto;
-  display: none;
-}
-.modal form {
-}
-.modal input {
-  /* display: block; */
-}
 /* #endregion */
 
 /* #region slider */
