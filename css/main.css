@@ -785,6 +785,7 @@ a {
   right: 0;
   width: 230px;
   background: none;
+  color: inherit;
 }
 .form-btn::after {
   color: var(--color-black-100);
