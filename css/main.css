@@ -675,7 +675,8 @@ a {
   margin-top: 30px;
 }
 
-.form__box-inner label {
+.form__box-inner label,
+.form__box-inner button {
   display: block;
   margin-top: 9px;
   font-family: var(--font-family-roboto);
@@ -785,7 +786,6 @@ a {
   right: 0;
   width: 230px;
   background: none;
-  color: inherit;
 }
 .form-btn::after {
   color: var(--color-black-100);
