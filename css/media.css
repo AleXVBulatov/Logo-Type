@@ -101,7 +101,7 @@
   }
 
   .footer__map {
-    flex: 1 1 630px;
+    min-width: 100%;
     max-height: 300px;
     height: 300px;
     padding: 0 0;
