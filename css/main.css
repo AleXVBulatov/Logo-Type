@@ -1010,7 +1010,7 @@ a {
 }
 
 .footer__info {
-  flex: 0 1 360px;
+  flex: 0 0 360px;
   /* max-width: 360px;
   width: 100%; */
   font-family: var(--font-family-roboto);
@@ -1018,10 +1018,10 @@ a {
 
 .footer__title {
   margin-bottom: 12px;
-  font-family: 500;
+  font-weight: 500;
   font-size: 16px;
   line-height: 36px;
-  letter-spacing: 0.5px;
+  /* letter-spacing: 0.5px; */
   color: #fff;
 }
 
@@ -1085,11 +1085,17 @@ a {
 }
 
 .copy__text {
+  padding: 16px 0 13px 0;
   font-family: var(--font-family-roboto);
   font-size: 12px;
-  line-height: 42px;
+  line-height: 16px;
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
 }
+
+.copy__text br {
+  display: none;
+}
+
 /* #endregion */
