@@ -1073,6 +1073,7 @@ a {
   flex: 0 1 630px;
   /* max-width: 630px;
   width: 100%; */
+  min-height: 100%;
   padding: 13px 0;
 }
 .footer__map iframe {
