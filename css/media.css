@@ -101,9 +101,11 @@
   }
 
   .footer__map {
+    flex: none;
     min-width: 100%;
-    max-height: 300px;
-    height: 300px;
+    width: 100%;
+    /* max-height: 300px;
+    height: 300px; */
     padding: 0 0;
   }
 
